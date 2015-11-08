@@ -7,9 +7,11 @@ module OmniAuth
       option :name, 'fitbit'
 
       option :client_options, {
-        site: 'https://api.fitbit.com'
-        authorize_url: 'https://www.fitbit.com/oauth2/authorize',
-        token_url: 'https://api.fitbit.com/oauth2/token'
+        site: 'https://api.fitbit.com',
+        authorize_url: 'https://www.fitbit.com/oauth/authorize',
+        request_token_path: '/oauth/request_token',
+        access_token_path: '/oauth/access_token',
+        authorize_path: '/oauth/authorize'
       }
 
 
@@ -29,4 +31,4 @@ module OmniAuth
   end
 end
 
-OmniAuth.config.add_camelization 'fitbit', 'FitBit'
+OmniAuth.config.add_camelization 'fitbit', 'fitBit'

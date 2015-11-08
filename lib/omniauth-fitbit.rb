@@ -1,2 +1,2 @@
-require "omniauth-github/version"
+require 'omniauth-fitbit/version'
 require 'omniauth/strategies/fitbit'
